@@ -2,7 +2,6 @@
 <html>
   <head>
     <title>Submit a form</title>
-   <link rel="stylesheet" type="text/css" href="/static/css/template.css">
   </head>
   <body>
   {% extends "template.html" %}
@@ -11,17 +10,19 @@
       <div class="pagetitle">
         <h1>Submit a form</h1>
       </div>
-      <div id="main">
+      <div id="main" class="col-md-8 col-lg-6">
         <form method="post" action="{{ url_for('submitted_form') }}">
-          <label for="name">Name:</label>
-          <input type="text" name="name"><br />
-          <label for="email">Email address:</label>
-          <input type="email" name="email"><br />
-          <label for="site_url">Website URL:</label>
-          <input type="url" name="site_url"><br />
-          <label for="comments">Comments:</label>
-          <textarea name="comments"></textarea><br />
-          <input type="submit">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" name="name" class="form-control"><br />
+              <label for="email" >Email address:</label>
+              <input type="email" name="email" class="form-control"><br />
+              <label for="site_url">Website URL:</label>
+              <input type="url" name="site_url" class="form-control"><br />
+              <label for="comments">Comments:</label>
+              <textarea name="comments" class="form-control"></textarea><br />
+              <input type="submit">
+            </div>
         </form>
       </div>
     </div>
